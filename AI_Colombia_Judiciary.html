@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI in Colombia's Judiciary</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="progress"></div>
+
+    <div id="deck">
+
+      <div class="slide active" id="s1">
+        <div class="emoji-header">⚖️🤖</div>
+        <h1>AI in <span>Colombia's</span><br />Judiciary</h1>
+        <p class="subtitle">A judge, a chatbot, and a Constitutional Court ruling that changed things</p>
+        <p class="sources">
+          Ruling T-323/2024, Constitutional Court of Colombia<br />
+          Agreement PCSJA24-12243, Superior Council of Judicature (Dec. 2024)<br />
+          "AI Experiences in the Judiciary" Survey (Feb. 2025), Dialogue between the Judiciary and the Ombudsman's Office (May 2025)
+        </p>
+      </div>
+
+      <div class="slide" id="s1b">
+        <div class="collage-wrap">
+          <a class="sc sc-court" href="https://www.corteconstitucional.gov.co/relatoria/2024/t-323-24.htm" target="_blank">
+            <img src="corte.png" alt="Corte Constitucional T-323/2024" />
+          </a>
+          <a class="sc sc-unesco" href="https://www.unesco.org/en/articles/justice-meets-innovation-colombias-groundbreaking-ai-guidelines-courts#:~:text=Justice%20meets%20innovation:%20Colombia's%20groundbreaking%20AI%20guidelines%20for%20courts,of%20AI%20in%20justice%20systems." target="_blank">
+            <img src="unesco.png" alt="UNESCO" />
+          </a>
+          <a class="sc sc-oxford" href="https://www.techandjustice.bsg.ox.ac.uk/research/colombia" target="_blank">
+            <img src="oxford.png" alt="Oxford Tech and Justice" />
+          </a>
+          <a class="sc sc-chambers" href="https://chambers.com/articles/from-code-to-constitution-the-constitutionalization-of-artificial-intelligence-in-colombia-s-case-l" target="_blank">
+            <img src="chambers.png" alt="Chambers and Partners" />
+          </a>
+        </div>
+        <p class="dl-label">📎 Download supporting documents</p>
+        <div class="dl-row">
+          <a class="dl-btn" href="ABC_SentenciaIA_T323De2024.pdf" download>📄 ABC: Ruling T-323</a>
+          <a class="dl-btn" href="DocumentoTecnico_LineamientosUsoIARamaJudicial_13122024_Vrev.pdf" download>📄 Technical Guidelines</a>
+          <a class="dl-btn" href="Manual para el uso de IA-Navegable.pdf" download>📄 AI Use Manual</a>
+          <a class="dl-btn" href="Informe-de-Repositorios-Proyecto-SAP-v2.0.pdf" download>📄 SAP Repository Report</a>
+        </div>
+      </div>
+
+      <div class="slide" id="s2">
+        <span class="slide-tag">The Case (2022/2023)</span>
+        <h2>It started with a mom and her son.</h2>
+        <div class="summary-box">
+          "Blanca" filed a tutela on behalf of her son "Emilio," a child diagnosed with Autism Spectrum Disorder. The family was classified under SISBEN A4 (extreme poverty). She was asking for three things: no copayments for his therapies, transportation covered to get him to appointments, and a guarantee that his treatment wouldn't be cut off.
+          <br /><br />
+          <small class="fictional-names">"Blanca" and "Emilio" are fictional names. Per Agreement 02 of 2015 and Internal Circular 10/2022, the Court publishes two versions of every ruling involving minors: one with real names sent only to the parties, and one with fictional names for public distribution. This is the public version.</small>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="num">DEC 2022</div>
+            <p>First instance court granted everything. EPS ordered to eliminate copayments and cover transport.</p>
+          </div>
+          <div class="step">
+            <div class="num">JAN 2023</div>
+            <p>Second instance confirmed, but the circuit court judge also opened ChatGPT 3.5 to <em>"extend the arguments."</em></p>
+          </div>
+          <div class="step">
+            <div class="num">THEN</div>
+            <p>The AI's answers went straight into the official court record, word for word.</p>
+          </div>
+          <div class="step">
+            <div class="num">KEY FACT</div>
+            <p>The judge had <strong class="highlight-green">already decided</strong> before consulting ChatGPT. The AI was used to write, not to think.</p>
+          </div>
+        </div>
+        <span class="source">Source: Ruling T-323/2024, Constitutional Court of Colombia</span>
+      </div>
+
+      <div class="slide" id="s3">
+        <h2>The Court's Take</h2>
+        <p class="ruling-ref">Ruling T-323/2024, Constitutional Court. Justice Juan Carlos Cortés González</p>
+        <div class="cards">
+          <div class="card ok">
+            <div class="icon">✅</div>
+            <h3>Due Process: NOT violated</h3>
+            <p>The judge had already made up his mind before opening ChatGPT. The AI wrote; it didn't think. That order of events was exactly what saved him.</p>
+          </div>
+          <div class="card warn">
+            <div class="icon">⚠️</div>
+            <h3>Transparency: NOT met</h3>
+            <p>Just saying "I used AI" isn't enough. The people whose case it was had a right to know which tool, what he asked it, and what the model can get wrong.</p>
+          </div>
+          <div class="card warn">
+            <div class="icon">⚠️</div>
+            <h3>Accountability: AT RISK</h3>
+            <p>Some of what ChatGPT produced was wrong. It has no specialized training in Colombian law. Those errors ended up in an official court record, and nobody caught them.</p>
+          </div>
+        </div>
+        <div class="privacy-note">
+          ✅ One thing he did get right: Emilio's personal data never went into ChatGPT. Privacy held.
+        </div>
+      </div>
+
+      <div class="slide" id="s3b">
+        <h2>What the Court Actually Ordered</h2>
+        <p class="ruling-ref">Five binding orders in Ruling T-323/2024</p>
+        <div class="orders-grid">
+          <div class="order-card teal">
+            <p class="order-title">1. Emilio's transportation coverage</p>
+            <p class="order-body">The EPS must cover trips to every specialist visit and diagnostic procedure, not just therapy. For as long as the family can't pay for it themselves.</p>
+          </div>
+          <div class="order-card teal">
+            <p class="order-title">2. No more copayments, and no more runaround</p>
+            <p class="order-body">The EPS has to coordinate with its own providers so exemptions under Laws 1438/2011 and 1618/2013 kick in automatically. A family in extreme poverty shouldn't have to fight for a right that already exists.</p>
+          </div>
+          <div class="order-card amber">
+            <p class="order-title">3. A message to every judge in Colombia</p>
+            <p class="order-body">Not a ban. An exhortation: if you use AI, ask yourself whether it makes sense for the case and whether it holds up against constitutional principles and judicial independence.</p>
+          </div>
+          <div class="order-card amber">
+            <p class="order-title">4. Guidelines within four months</p>
+            <p class="order-body">The Superior Council of Judicature had to issue AI rules built on the 12 principles in this ruling. They did it: Agreement PCSJA24-12243, December 2024.</p>
+          </div>
+          <div class="order-card amber full">
+            <p class="order-title">5. Train every judge, starting now</p>
+            <p class="order-body">The Judicial School must send this ruling to every judge in the country and put together ongoing AI training grounded in rights, not just technology. Next slide: the 12 principles the training has to cover.</p>
+          </div>
+        </div>
+        <span class="source-abs">Source: Ruling T-323/2024, Constitutional Court of Colombia</span>
+      </div>
+
+      <div class="slide" id="s3c">
+        <div class="wheel-side">
+          <h2>The 12 Principles</h2>
+          <p>The Court didn't just point out what went wrong. It set out 12 principles that any use of AI in judicial work has to respect, and ordered the judiciary to build everything else on top of them.</p>
+          <p class="wheel-note">These aren't suggestions. The Agreement PCSJA24-12243 is directly grounded in all twelve.</p>
+          <p class="src">Source: Ruling T-323/2024, Constitutional Court of Colombia</p>
+        </div>
+        <div class="wheel-wrap" id="wheel">
+          <svg class="wheel-svg" id="wheelSvg"></svg>
+          <div class="wheel-hub">12<br />Principles<br /><small>T-323/2024</small></div>
+        </div>
+      </div>
+
+      <div class="slide" id="s4">
+        <h2>What the Court Said Had to Change</h2>
+        <p class="sub">Six principles ordered by the Court, later codified in Agreement PCSJA24-12243</p>
+        <div class="grid">
+          <div class="rule">
+            <div class="icon">👁️</div>
+            <h3>Transparency</h3>
+            <p>Put it on the record: which tool, what you asked, what it can and can't do</p>
+          </div>
+          <div class="rule">
+            <div class="icon">🎯</div>
+            <h3>Accountability</h3>
+            <p>Check everything the AI tells you. Get trained. The reasoning stays yours.</p>
+          </div>
+          <div class="rule">
+            <div class="icon">🔒</div>
+            <h3>Privacy</h3>
+            <p>No personal or sensitive data goes into any external AI tool. Full stop.</p>
+          </div>
+          <div class="rule">
+            <div class="icon">🧠</div>
+            <h3>Non-Substitution</h3>
+            <p>Weighing evidence and deciding a case is a human job. That doesn't change.</p>
+          </div>
+          <div class="rule">
+            <div class="icon">🔍</div>
+            <h3>Rigor</h3>
+            <p>Treat AI outputs the way you'd treat any unverified source: with skepticism</p>
+          </div>
+          <div class="rule">
+            <div class="icon">⚖️</div>
+            <h3>Equality</h3>
+            <p>Algorithmic bias is a real risk when rights are on the line</p>
+          </div>
+        </div>
+        <span class="source">Sources: Ruling T-323/2024, Agreement PCSJA24-12243, Dec. 2024</span>
+      </div>
+
+      <div class="slide" id="s5">
+        <h2>How We Got Here</h2>
+        <p class="sub">From one court record with ChatGPT in it to a full regulatory framework, in under two years</p>
+        <div class="timeline">
+          <div class="tl-item">
+            <div class="tl-date">AUG 2024</div>
+            <div class="tl-content">
+              <h3>Ruling T-323/2024, Constitutional Court</h3>
+              <p>The first AI ruling in Colombian justice history. It also told the Superior Council of Judicature to come up with concrete guidelines, and gave them four months to do it.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">DEC 2024</div>
+            <div class="tl-content">
+              <h3>Agreement PCSJA24-12243, Superior Council of Judicature</h3>
+              <p>They delivered. 16 articles covering what's allowed, what isn't, who's responsible, and how to report usage. Three categories of permitted use, clearly defined.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">FEB 2025</div>
+            <div class="tl-content">
+              <h3>Survey: "AI Experiences in the Judiciary"</h3>
+              <p>3,152 judicial servants answered questions about how they're actually using AI. The results (including an interactive dashboard) were made public.</p>
+            </div>
+          </div>
+          <div class="tl-item">
+            <div class="tl-date">MAY 2025</div>
+            <div class="tl-content">
+              <h3>Judiciary + Ombudsman's Office</h3>
+              <p>Both institutions started working groups together to review how the Agreement is being implemented, with a focus on human rights.</p>
+            </div>
+          </div>
+        </div>
+        <span class="source">Sources: ramajudicial.gov.co, defensoria.gov.co, Ruling T-323/2024</span>
+      </div>
+
+      <div class="slide" id="s6">
+        <h2>The Numbers</h2>
+        <p class="sub">Feb. 2025, 3,152 judicial servants surveyed across Colombia</p>
+        <div class="stats-row">
+          <div class="stat">
+            <div class="big">3/10</div>
+            <p>judicial servants<br />already use AI</p>
+          </div>
+          <div class="stat">
+            <div class="big">53.6%</div>
+            <p>of AI users<br />work in courts</p>
+          </div>
+          <div class="stat">
+            <div class="big">22.1%</div>
+            <p>of <strong>judges</strong><br />use AI</p>
+          </div>
+          <div class="stat">
+            <div class="big">39.9%</div>
+            <p>of <strong>magistrates</strong><br />use AI</p>
+          </div>
+        </div>
+        <p class="uses-label">And what are they actually doing with it?</p>
+        <div class="uses-row">
+          <div class="use-card">
+            <div class="icon">📚</div>
+            <div class="pct">78%</div>
+            <p>Legal research</p>
+          </div>
+          <div class="use-card">
+            <div class="icon">✏️</div>
+            <div class="pct">65%</div>
+            <p>Summarize &amp; edit texts</p>
+          </div>
+          <div class="use-card">
+            <div class="icon">🎙️</div>
+            <div class="pct">42%</div>
+            <p>Transcribe audio</p>
+          </div>
+          <div class="use-card">
+            <div class="icon">💡</div>
+            <div class="pct">38%</div>
+            <p>Generate ideas</p>
+          </div>
+        </div>
+        <p class="note">Bogotá accounts for 18.7% of all reported AI users in the judiciary</p>
+      </div>
+
+      <div class="slide" id="s7">
+        <h2>What You Can and Cannot Do</h2>
+        <p class="sub">Agreement PCSJA24-12243, Articles 4 and 5</p>
+        <div class="cols">
+          <div class="col yes">
+            <h3>✅ GO AHEAD</h3>
+            <ul>
+              <li>Write emails and administrative documents</li>
+              <li>Organize hearing schedules</li>
+              <li>Summarize case law, as long as a human checks it</li>
+              <li>Search for legal sources</li>
+              <li>Transcribe hearings</li>
+              <li>Fix grammar and spelling</li>
+            </ul>
+          </div>
+          <div class="col no">
+            <h3>❌ HARD NO</h3>
+            <ul>
+              <li>Let AI weigh evidence on its own</li>
+              <li>Use AI output as the reasoning behind a ruling</li>
+              <li>Let AI make any substantive call</li>
+              <li>Outsource the judge's thinking to a machine</li>
+              <li>Run case data through a free public chatbot</li>
+              <li>Feed personal data of any party into an AI</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide" id="s8">
+        <h2>The Official 7-Step Checklist</h2>
+        <p class="sub">CSJ's guide to using AI without getting into trouble (2024/2025)</p>
+        <div class="steps">
+          <div class="st">
+            <div class="num">1</div>
+            <h3>Why are you using it?</h3>
+            <p>Have a clear purpose before you open any tool</p>
+          </div>
+          <div class="st">
+            <div class="num">2</div>
+            <h3>Is it actually allowed?</h3>
+            <p>Check Article 4 of the Agreement before you start</p>
+          </div>
+          <div class="st">
+            <div class="num">3</div>
+            <h3>Know your tool</h3>
+            <p>Understand its limits and how it handles the data you give it</p>
+          </div>
+          <div class="st">
+            <div class="num">4</div>
+            <h3>Remember the basics</h3>
+            <p>No free chatbots with case data. Cite the AI. Protect personal data. The decision is yours.</p>
+          </div>
+        </div>
+        <div class="step2">
+          <div class="st">
+            <div class="num">5</div>
+            <h3>You still have to check</h3>
+            <p>Verify every piece of AI-generated information before it goes anywhere</p>
+          </div>
+          <div class="st">
+            <div class="num">6</div>
+            <h3>Put it on the record</h3>
+            <p>Log the tool, model, provider, date and the prompts you used. In the file.</p>
+          </div>
+          <div class="st">
+            <div class="num">7</div>
+            <h3>Report it</h3>
+            <p>Send usage info to UTDI:<br />inteligenciartificial@<br />deaj.ramajudicial.gov.co</p>
+          </div>
+        </div>
+        <span class="source">Source: Manual for AI Use, Superior Council of Judicature, 2024/2025</span>
+      </div>
+
+      <div class="slide" id="s9">
+        <h2>Still a Work in Progress 🔭</h2>
+        <div class="cards">
+          <div class="card">
+            <div class="icon">🚧</div>
+            <h3>No other country in LatAm has done this</h3>
+            <p>Colombia is the first in the region to have a regulatory framework specifically for AI in the judiciary. The framework itself treats the rules as a starting point, not a final answer.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🤝</div>
+            <h3>Nobody's doing this alone</h3>
+            <p>The Judiciary, the Ombudsman's Office, and the Judicial School are working together on implementation. The Agreement also calls for collaboration with UNESCO and other international bodies.</p>
+          </div>
+          <div class="card">
+            <div class="icon">🎯</div>
+            <h3>Where they want to end up</h3>
+            <p>A dedicated AI platform built for Colombian law. Not a general chatbot repurposed for court use. Fewer hallucinations, fewer biases, and no privacy gaps.</p>
+          </div>
+        </div>
+        <p class="credit">
+          Sources: ramajudicial.gov.co, Ruling T-323/2024, Agreement PCSJA24-12243, Judiciary Survey Feb. 2025, Ombudsman's Office May 2025
+        </p>
+      </div>
+
+    </div>
+
+    <div id="nav">
+      <button id="prevBtn" onclick="move(-1)">←</button>
+      <span id="counter">1 / 9</span>
+      <button id="nextBtn" onclick="move(1)">→</button>
+    </div>
+
+    <script src="slides.js"></script>
+  </body>
+</html>
