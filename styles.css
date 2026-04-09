@@ -217,9 +217,10 @@ body {
   line-height: 1.4;
 }
 
-#s2 .source {
+/* single rule for all source footnotes */
+.source {
   position: absolute;
-  bottom: 2.5vh;
+  bottom: 7vh;
   right: 6vw;
   font-size: 0.72rem;
   color: var(--muted);
@@ -299,6 +300,25 @@ body {
   text-align: center;
 }
 
+#s3b {
+  background: linear-gradient(135deg, #0d1b2a, #1a2e40);
+}
+
+#s3b h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+#s3b .ruling-ref {
+  font-size: clamp(0.65rem, 1.1vw, 0.85rem);
+  color: var(--muted);
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
 #s4 {
   background: linear-gradient(135deg, #0d1b2a, #162232);
 }
@@ -352,13 +372,6 @@ body {
   line-height: 1.5;
 }
 
-#s4 .source {
-  position: absolute;
-  bottom: 2.5vh;
-  right: 6vw;
-  font-size: 0.72rem;
-  color: var(--muted);
-}
 
 #s5 {
   background: linear-gradient(160deg, #0a1628, #162232);
@@ -419,13 +432,6 @@ body {
   line-height: 1.5;
 }
 
-#s5 .source {
-  position: absolute;
-  bottom: 2.5vh;
-  right: 6vw;
-  font-size: 0.72rem;
-  color: var(--muted);
-}
 
 #s6 {
   background: linear-gradient(135deg, #0d1b2a, #1c2e40);
@@ -671,13 +677,6 @@ body {
   line-height: 1.4;
 }
 
-#s8 .source {
-  position: absolute;
-  bottom: 2.5vh;
-  right: 6vw;
-  font-size: 0.72rem;
-  color: var(--muted);
-}
 
 #s9 {
   background: radial-gradient(ellipse at 40% 60%, #1a3a5c 0%, var(--navy) 70%);
@@ -726,12 +725,11 @@ body {
 
 #s9 .credit {
   position: absolute;
-  bottom: 8vh;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 7vh;
+  right: 6vw;
   font-size: 0.72rem;
   color: var(--muted);
-  text-align: center;
+  text-align: right;
   white-space: nowrap;
 }
 
@@ -1019,7 +1017,7 @@ body {
 
 .source-abs {
   position: absolute;
-  bottom: 6.5vh;
+  bottom: 7vh;
   right: 6vw;
   font-size: 0.72rem;
   color: var(--muted);

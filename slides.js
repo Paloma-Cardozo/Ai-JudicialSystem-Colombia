@@ -88,4 +88,5 @@ document.addEventListener("touchend", (e) => {
   });
 })();
 
+document.getElementById("counter").textContent = `1 / ${total}`;
 document.getElementById("progress").style.width = `${(1 / total) * 100}%`;
