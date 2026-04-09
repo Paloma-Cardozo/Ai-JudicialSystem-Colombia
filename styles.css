@@ -192,7 +192,7 @@ body {
 
 #s2 .steps {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 100%;
   max-width: 900px;
@@ -248,7 +248,7 @@ body {
 
 #s3 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.2rem;
   width: 100%;
   max-width: 950px;
@@ -340,7 +340,7 @@ body {
 
 #s4 .grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 1rem;
   width: 100%;
   max-width: 950px;
@@ -454,7 +454,7 @@ body {
 
 #s6 .stats-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
   width: 100%;
   max-width: 950px;
@@ -484,7 +484,7 @@ body {
 
 #s6 .uses-row {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.8rem;
   width: 100%;
   max-width: 950px;
@@ -540,7 +540,7 @@ body {
 
 #s7 .cols {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1.5rem;
   width: 100%;
   max-width: 850px;
@@ -627,7 +627,7 @@ body {
 
 #s8 .steps {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.8rem;
   width: 100%;
   max-width: 950px;
@@ -636,7 +636,7 @@ body {
 
 #s8 .step2 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 0.8rem;
   width: 100%;
   max-width: 710px;
@@ -692,7 +692,7 @@ body {
 
 #s9 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
   gap: 1.4rem;
   width: 100%;
   max-width: 900px;
@@ -744,6 +744,7 @@ body {
   height: 430px;
   margin-bottom: 1.2rem;
   flex-shrink: 0;
+  zoom: 0.4;
 }
 
 #s1b .sc {
@@ -812,7 +813,7 @@ body {
 
 #s3c {
   background: linear-gradient(160deg, #0a1628, #162232);
-  flex-direction: row !important;
+  flex-direction: column !important;
   justify-content: center !important;
   gap: 3vw;
 }
@@ -821,7 +822,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 320px;
+  max-width: 100%;
 }
 
 #s3c .wheel-side h2 {
@@ -848,6 +849,7 @@ body {
   width: 400px;
   height: 400px;
   flex-shrink: 0;
+  zoom: 0.72;
 }
 
 .wheel-hub {
@@ -903,22 +905,47 @@ body {
   z-index: 1;
 }
 
-@media (max-width: 800px) {
+@media (min-width: 500px) {
+  .wheel-wrap {
+    zoom: 0.9;
+  }
+  #s1b .collage-wrap {
+    zoom: 0.65;
+  }
+}
+
+@media (min-width: 800px) {
   #s2 .steps,
   #s6 .stats-row,
   #s6 .uses-row,
   #s8 .steps {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
   #s3 .cards,
-  #s4 .grid,
-  #s7 .cols,
   #s9 .cards {
-    grid-template-columns: 1fr;
-    gap: 0.7rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #s4 .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #s7 .cols,
+  .orders-grid {
+    grid-template-columns: 1fr 1fr;
   }
   #s8 .step2 {
     grid-template-columns: repeat(3, 1fr);
+  }
+  #s3c {
+    flex-direction: row !important;
+  }
+  #s3c .wheel-side {
+    max-width: 320px;
+  }
+  .wheel-wrap {
+    zoom: 1;
+  }
+  #s1b .collage-wrap {
+    zoom: 1;
   }
 }
 
@@ -973,7 +1000,7 @@ body {
 
 .orders-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 0.9rem;
   width: 100%;
   max-width: 950px;
