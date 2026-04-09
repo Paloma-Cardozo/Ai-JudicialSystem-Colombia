@@ -26,17 +26,19 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-let tx = 0;
+let tx = 0, ty = 0;
 document.addEventListener(
   "touchstart",
   (e) => {
     tx = e.touches[0].clientX;
+    ty = e.touches[0].clientY;
   },
   { passive: true },
 );
 document.addEventListener("touchend", (e) => {
   const dx = e.changedTouches[0].clientX - tx;
-  if (Math.abs(dx) > 50) move(dx < 0 ? 1 : -1);
+  const dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) move(dx < 0 ? 1 : -1);
 });
 
 (function buildWheel() {
