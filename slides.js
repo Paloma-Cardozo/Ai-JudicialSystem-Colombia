@@ -41,20 +41,44 @@ document.addEventListener("touchend", (e) => {
   if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) move(dx < 0 ? 1 : -1);
 });
 
+(function buildWheelTip() {
+  const tip = document.createElement("div");
+  tip.id = "wheelTip";
+  document.body.appendChild(tip);
+
+  function position(e) {
+    const x = e.clientX + 14;
+    const y = e.clientY - 48;
+    tip.style.left = Math.min(x, window.innerWidth - 240) + "px";
+    tip.style.top = Math.max(y, 8) + "px";
+  }
+
+  document.addEventListener("mousemove", (e) => {
+    if (tip.style.display === "block") position(e);
+  });
+
+  window._showWheelTip = (text, e) => {
+    tip.textContent = text;
+    tip.style.display = "block";
+    position(e);
+  };
+  window._hideWheelTip = () => { tip.style.display = "none"; };
+})();
+
 (function buildWheel() {
   const principles = [
-    "Transparency",
-    "Responsibility",
-    "Privacy",
-    "Human Rationality",
-    "Rigor & Verification",
-    "Risk Prevention",
-    "Equality & Equity",
-    "Human Control",
-    "Ethical Standards",
-    "Best Practices",
-    "Continuous Adaptation",
-    "Fitness for Purpose",
+    { name: "Transparency",        tip: "Disclose which tool, what you asked it, and where its output appears in the record." },
+    { name: "Responsibility",      tip: "Get trained, understand the limits, and verify everything the tool generates." },
+    { name: "Privacy",             tip: "Personal and sensitive case data stays protected. It does not go into any AI tool." },
+    { name: "Human Rationality",   tip: "Weighing evidence and deciding a case is a human job. That cannot be delegated." },
+    { name: "Rigor & Verification",tip: "Scrutinize sources, limits, gaps, and risks before any AI output goes near a decision." },
+    { name: "Risk Prevention",     tip: "Control for hallucinations, outdated data, bias, and inconsistencies before they cause harm." },
+    { name: "Equality & Equity",   tip: "AI tools carry built-in biases. When rights are on the line, those cannot be ignored." },
+    { name: "Human Control",       tip: "Any AI-assisted decision must stay open to challenge before a human authority." },
+    { name: "Ethical Standards",   tip: "Individual conduct must align with legal mandates and responsible AI use guidelines." },
+    { name: "Best Practices",      tip: "Apply the frameworks defined by the judiciary's own governing bodies." },
+    { name: "Continuous Adaptation", tip: "Keep pace with legal, social, and technological developments as they evolve." },
+    { name: "Fitness for Purpose", tip: "Technology must genuinely help people access justice, not just be used because it exists." },
   ];
   const wrap = document.getElementById("wheel");
   const svg = document.getElementById("wheelSvg");
@@ -63,7 +87,7 @@ document.addEventListener("touchend", (e) => {
     r = 162;
   const ns = "http://www.w3.org/2000/svg";
 
-  principles.forEach((name, i) => {
+  principles.forEach(({ name, tip }, i) => {
     const angle = (i / 12) * Math.PI * 2 - Math.PI / 2;
     const x = cx + r * Math.cos(angle);
     const y = cy + r * Math.sin(angle);
@@ -86,6 +110,8 @@ document.addEventListener("touchend", (e) => {
     pill.textContent = name;
     pill.style.left = x + "px";
     pill.style.top = y + "px";
+    pill.addEventListener("mouseenter", (e) => window._showWheelTip(tip, e));
+    pill.addEventListener("mouseleave", () => window._hideWheelTip());
     wrap.appendChild(pill);
   });
 })();
