@@ -6,9 +6,12 @@ function show(n) {
   slides[cur].classList.remove("active");
   cur = (n + total) % total;
   slides[cur].classList.add("active");
+  slides[cur].setAttribute("tabindex", "-1");
+  slides[cur].focus({ preventScroll: true });
   document.getElementById("counter").textContent = `${cur + 1} / ${total}`;
-  document.getElementById("progress").style.width =
-    `${((cur + 1) / total) * 100}%`;
+  const progress = document.getElementById("progress");
+  progress.style.width = `${((cur + 1) / total) * 100}%`;
+  progress.setAttribute("aria-valuenow", cur + 1);
 }
 
 function move(dir) {

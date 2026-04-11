@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="progress"></div>
+    <div id="progress" role="progressbar" aria-valuemin="1" aria-valuemax="12" aria-valuenow="1" aria-label="Slide progress"></div>
 
-    <div id="deck">
+    <div id="deck" role="main" aria-label="Presentation: Artificial Intelligence in Colombia's Judiciary">
 
-      <div class="slide active" id="s1">
-        <div class="emoji-header">⚖️🤖</div>
+      <div class="slide active" id="s1" role="region" aria-label="Slide 1: Title">
+        <div class="emoji-header" aria-hidden="true">⚖️🤖</div>
         <h1>Artificial Intelligence in <span>Colombia's</span><br />Judiciary</h1>
         <p class="subtitle">A judge, a generative AI tool, and a Constitutional Court ruling that changed things</p>
         <p class="sources">
@@ -23,7 +23,7 @@
         <a class="byline" href="https://paloma-cardozo.vercel.app/" target="_blank">Paloma Cardozo</a>
       </div>
 
-      <div class="slide" id="s1b">
+      <div class="slide" id="s1b" role="region" aria-label="Slide 2: Sources and downloads">
         <div class="collage-wrap">
           <a class="sc sc-court" href="https://www.corteconstitucional.gov.co/relatoria/2024/t-323-24.htm" target="_blank">
             <img src="corte.png" alt="Corte Constitucional T-323/2024" />
@@ -49,7 +49,7 @@
         </div>
       </div>
 
-      <div class="slide" id="s1c">
+      <div class="slide" id="s1c" role="region" aria-label="Slide 3: Context">
         <span class="slide-tag">A bit of context</span>
         <h2>Three things worth knowing before the case</h2>
         <p class="sub">Understanding these changes how you read everything else</p>
@@ -78,7 +78,7 @@
         </div>
       </div>
 
-      <div class="slide" id="s2">
+      <div class="slide" id="s2" role="region" aria-label="Slide 4: The Case">
         <span class="slide-tag">The Case (2022/2023)</span>
         <h2>It started with a mom and her son.</h2>
         <div class="summary-box">
@@ -106,7 +106,7 @@
         </div>
       </div>
 
-      <div class="slide" id="s3">
+      <div class="slide" id="s3" role="region" aria-label="Slide 5: The Court's Take">
         <h2>The Court's Take</h2>
         <p class="ruling-ref">Ruling T-323/2024, Constitutional Court. <span class="tip" data-tip="Magistrado ponente: the justice assigned to draft and write the ruling">Justice</span> Juan Carlos Cortés González</p>
         <div class="cards">
@@ -131,7 +131,7 @@
         </div>
       </div>
 
-      <div class="slide" id="s3b">
+      <div class="slide" id="s3b" role="region" aria-label="Slide 6: What the Court Ordered">
         <h2>What the Court Actually Ordered</h2>
         <p class="ruling-ref">Five <span class="tip" data-tip="formal court directives that all named parties are legally required to follow">binding orders</span> in Ruling T-323/2024</p>
         <div class="orders-grid">
@@ -158,7 +158,7 @@
         </div>
       </div>
 
-      <div class="slide" id="s3c">
+      <div class="slide" id="s3c" role="region" aria-label="Slide 7: The 12 Principles">
         <div class="wheel-side">
           <h2>The 12 Principles</h2>
           <p>The Court didn't just point out what went wrong. It set out 12 principles that any use of AI tools in judicial work has to respect, and ordered the judiciary to build everything else on top of them.</p>
@@ -171,7 +171,7 @@
         </div>
       </div>
 
-      <div class="slide" id="s4">
+      <div class="slide" id="s4" role="region" aria-label="Slide 8: What the Agreement Had to Cover">
         <h2>What the Agreement Had to Cover</h2>
         <p class="sub">The Court didn't just set principles. It told the <span class="tip" data-tip="Colombia's governing body for judicial administration. It handles budget, court organization, staffing, and disciplinary proceedings for judges and court personnel. It does not rule on ordinary legal disputes">Superior Council of Judicature</span> exactly what the guidelines needed to address.</p>
         <div class="guidelines-grid">
@@ -248,7 +248,7 @@
         </div>
       </div>
 
-      <div class="slide" id="s5">
+      <div class="slide" id="s5" role="region" aria-label="Slide 9: Timeline">
         <h2>How We Got Here</h2>
         <p class="sub">From one court record with ChatGPT in it to a full regulatory framework, in under two years</p>
         <div class="timeline">
@@ -288,7 +288,7 @@
         </div>
       </div>
 
-      <div class="slide" id="s6">
+      <div class="slide" id="s6" role="region" aria-label="Slide 10: The Numbers">
         <h2>The Numbers</h2>
         <p class="sub">Survey conducted July 11–26, 2024 · 3,152 respondents · 8.2% of total judiciary staff · national coverage</p>
         <div class="stats-row">
@@ -331,7 +331,7 @@
         <p class="note">Bogotá accounts for 18.7% of all reported users · <a href="https://www.ramajudicial.gov.co/web/consejo-superior-de-la-judicatura/-/encuesta-revela-c%C3%B3mo-est%C3%A1-el-uso-de-la-ia-en-la-rama-judicial" target="_blank">Executive Report, January 2025</a></p>
       </div>
 
-<div class="slide" id="s8">
+      <div class="slide" id="s8" role="region" aria-label="Slide 11: The 7-Step Checklist">
         <h2>The Official 7-Step Checklist</h2>
         <p class="sub">Superior Council of Judicature's guide to using AI tools without getting into trouble · <a class="tl-dl" href="Manual para el uso de IA-Navegable.pdf" download>📄 Manual</a></p>
         <div class="steps">
@@ -375,7 +375,7 @@
         </div>
       </div>
 
-      <div class="slide" id="s9">
+      <div class="slide" id="s9" role="region" aria-label="Slide 12: Still a Work in Progress">
         <h2>Still a Work in Progress 🔭</h2>
         <div class="cards">
           <div class="card">
@@ -396,9 +396,9 @@
     </div>
 
     <div id="nav">
-      <button id="prevBtn" onclick="move(-1)">←</button>
-      <span id="counter"></span>
-      <button id="nextBtn" onclick="move(1)">→</button>
+      <button id="prevBtn" onclick="move(-1)" aria-label="Previous slide">←</button>
+      <span id="counter" aria-live="polite" aria-atomic="true"></span>
+      <button id="nextBtn" onclick="move(1)" aria-label="Next slide">→</button>
     </div>
 
     <script src="slides.js"></script>
