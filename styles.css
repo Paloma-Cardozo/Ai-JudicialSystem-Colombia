@@ -15,6 +15,8 @@
   --amber: #ffd166;
   --light: #f8f9fa;
   --muted: #8899aa;
+  --body: #9ab0c0;
+  --body-dim: #b0ccd8;
   --font: "Segoe UI", system-ui, sans-serif;
 }
 
@@ -51,6 +53,21 @@ body {
 .slide.active {
   opacity: 1;
   pointer-events: all;
+}
+
+.slide h2 {
+  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 0.3rem;
+  text-align: center;
+}
+
+.sub {
+  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
+  color: var(--muted);
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 #nav {
@@ -181,14 +198,6 @@ body {
   text-transform: uppercase;
 }
 
-#s2 h2 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: 0.3rem;
-  text-align: center;
-}
-
 #s2 .year-badge {
   background: var(--red);
   color: #fff;
@@ -235,7 +244,7 @@ body {
 
 #s2 .step p {
   font-size: clamp(0.7rem, 1.2vw, 0.9rem);
-  color: #b0ccd8;
+  color: var(--body-dim);
   line-height: 1.4;
 }
 
@@ -250,21 +259,6 @@ body {
 
 #s1c {
   background: linear-gradient(160deg, #0d1b2a, #1a2e40);
-}
-
-#s1c h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: 0.3rem;
-  text-align: center;
-}
-
-#s1c .sub {
-  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
-  color: var(--muted);
-  margin-bottom: 2rem;
-  text-align: center;
 }
 
 #s1c .ctx-cards {
@@ -312,7 +306,7 @@ body {
 
 #s1c .ctx-body p {
   font-size: clamp(0.75rem, 1.15vw, 0.9rem);
-  color: #b0ccd8;
+  color: var(--body-dim);
   line-height: 1.6;
 }
 
@@ -320,18 +314,11 @@ body {
   background: linear-gradient(160deg, #0d1b2a 0%, #1a2a3a 100%);
 }
 
-#s3 h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: 0.4rem;
-  text-align: center;
-}
-
-#s3 .ruling-ref {
+#s3 .ruling-ref,
+#s3b .ruling-ref {
   font-size: clamp(0.65rem, 1.1vw, 0.85rem);
   color: var(--muted);
-  margin-bottom: 2.2rem;
+  margin-bottom: 2rem;
   text-align: center;
   letter-spacing: 0.04em;
 }
@@ -375,7 +362,7 @@ body {
 
 #s3 .card p {
   font-size: clamp(0.72rem, 1.1vw, 0.85rem);
-  color: #b0ccd8;
+  color: var(--body-dim);
   line-height: 1.5;
 }
 
@@ -394,38 +381,8 @@ body {
   background: linear-gradient(135deg, #0d1b2a, #1a2e40);
 }
 
-#s3b h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: 0.3rem;
-  text-align: center;
-}
-
-#s3b .ruling-ref {
-  font-size: clamp(0.65rem, 1.1vw, 0.85rem);
-  color: var(--muted);
-  margin-bottom: 1.6rem;
-  text-align: center;
-}
-
 #s4 {
   background: linear-gradient(135deg, #0d1b2a, #162232);
-}
-
-#s4 h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: 0.3rem;
-  text-align: center;
-}
-
-#s4 .sub {
-  font-size: clamp(0.7rem, 1.2vw, 0.9rem);
-  color: var(--muted);
-  margin-bottom: 2rem;
-  text-align: center;
 }
 
 .guidelines-grid {
@@ -442,10 +399,9 @@ body {
   align-items: flex-start;
   background: rgba(0, 180, 216, 0.05);
   border: 1px solid rgba(0, 180, 216, 0.14);
+  border-bottom: 3px solid var(--teal);
   border-radius: 0.5rem;
   padding: 0.55rem 0.8rem;
-  border-bottom: 3px solid var(--teal);
-  text-align: center;
 }
 
 .g-num {
@@ -474,21 +430,6 @@ body {
 
 #s5 {
   background: linear-gradient(160deg, #0a1628, #162232);
-}
-
-#s5 h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: 0.4rem;
-  text-align: center;
-}
-
-#s5 .sub {
-  font-size: clamp(0.7rem, 1.1vw, 0.85rem);
-  color: var(--muted);
-  margin-bottom: 2rem;
-  text-align: center;
 }
 
 #s5 .timeline {
@@ -527,7 +468,7 @@ body {
 
 #s5 .tl-content p {
   font-size: clamp(0.68rem, 1.05vw, 0.82rem);
-  color: #9ab0c0;
+  color: var(--body);
   line-height: 1.5;
 }
 
@@ -550,21 +491,6 @@ body {
 
 #s6 {
   background: linear-gradient(135deg, #0d1b2a, #1c2e40);
-}
-
-#s6 h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: 0.3rem;
-  text-align: center;
-}
-
-#s6 .sub {
-  font-size: clamp(0.7rem, 1.1vw, 0.85rem);
-  color: var(--muted);
-  margin-bottom: 1.8rem;
-  text-align: center;
 }
 
 #s6 .stats-row {
@@ -592,7 +518,7 @@ body {
 
 #s6 .stat p {
   font-size: clamp(0.68rem, 1.05vw, 0.82rem);
-  color: #9ab0c0;
+  color: var(--body);
   margin-top: 0.3rem;
   line-height: 1.4;
 }
@@ -624,7 +550,7 @@ body {
 
 #s6 .use-card p {
   font-size: clamp(0.62rem, 1vw, 0.78rem);
-  color: #9ab0c0;
+  color: var(--body);
   margin-top: 0.2rem;
 }
 
@@ -643,110 +569,8 @@ body {
   text-decoration: underline;
 }
 
-#s7 {
-  background: linear-gradient(135deg, #0d1b2a, #162232);
-}
-
-#s7 h2 {
-  font-size: clamp(1.6rem, 3.5vw, 2.6rem);
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: 0.3rem;
-  text-align: center;
-}
-
-#s7 .sub {
-  font-size: clamp(0.7rem, 1.1vw, 0.85rem);
-  color: var(--muted);
-  margin-bottom: 1.8rem;
-  text-align: center;
-}
-
-#s7 .cols {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  width: 100%;
-  max-width: 850px;
-}
-
-#s7 .col {
-  border-radius: 1rem;
-  padding: 1.4rem 1.6rem;
-}
-
-#s7 .col.yes {
-  background: rgba(6, 214, 160, 0.09);
-  border: 1.5px solid rgba(6, 214, 160, 0.5);
-}
-
-#s7 .col.no {
-  background: rgba(239, 71, 111, 0.09);
-  border: 1.5px solid rgba(239, 71, 111, 0.5);
-}
-
-#s7 .col h3 {
-  font-size: clamp(0.85rem, 1.4vw, 1.05rem);
-  font-weight: 800;
-  margin-bottom: 1rem;
-}
-
-#s7 .col.yes h3 {
-  color: var(--green);
-}
-
-#s7 .col.no h3 {
-  color: var(--red);
-}
-
-#s7 .col ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-
-#s7 .col ul li {
-  font-size: clamp(0.7rem, 1.1vw, 0.85rem);
-  color: #b0ccd8;
-  padding-left: 1.4rem;
-  position: relative;
-  line-height: 1.4;
-}
-
-#s7 .col.yes ul li::before {
-  content: "✓";
-  position: absolute;
-  left: 0;
-  color: var(--green);
-  font-weight: 700;
-}
-
-#s7 .col.no ul li::before {
-  content: "✗";
-  position: absolute;
-  left: 0;
-  color: var(--red);
-  font-weight: 700;
-}
-
 #s8 {
   background: linear-gradient(160deg, #0a1628, #1c2e40);
-}
-
-#s8 h2 {
-  font-size: clamp(1.5rem, 3vw, 2.4rem);
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: 0.3rem;
-  text-align: center;
-}
-
-#s8 .sub {
-  font-size: clamp(0.65rem, 1.1vw, 0.85rem);
-  color: var(--muted);
-  margin-bottom: 1.6rem;
-  text-align: center;
 }
 
 #s8 .steps {
@@ -797,7 +621,7 @@ body {
 
 #s8 .st p {
   font-size: clamp(0.62rem, 0.95vw, 0.78rem);
-  color: #9ab0c0;
+  color: var(--body);
   line-height: 1.4;
 }
 
@@ -805,13 +629,6 @@ body {
 #s9 {
   background: radial-gradient(ellipse at 40% 60%, #1a3a5c 0%, var(--navy) 70%);
   text-align: center;
-}
-
-#s9 h2 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
-  color: #fff;
-  font-weight: 800;
-  margin-bottom: 2rem;
 }
 
 #s9 .cards {
@@ -843,7 +660,7 @@ body {
 
 #s9 .card p {
   font-size: clamp(0.7rem, 1.1vw, 0.85rem);
-  color: #9ab0c0;
+  color: var(--body);
   line-height: 1.6;
 }
 
@@ -918,7 +735,7 @@ body {
 #s1b .dl-btn {
   background: rgba(255, 255, 255, 0.07);
   border: 1px solid rgba(255, 255, 255, 0.18);
-  color: #b0ccd8;
+  color: var(--body-dim);
   font-size: clamp(0.55rem, 0.82vw, 0.7rem);
   padding: 0.26rem 0.75rem;
   border-radius: 1.5rem;
@@ -957,7 +774,7 @@ body {
 
 #s3c .wheel-side p {
   font-size: clamp(0.7rem, 1.1vw, 0.85rem);
-  color: #9ab0c0;
+  color: var(--body);
   line-height: 1.6;
 }
 
@@ -1103,7 +920,6 @@ body {
   .guidelines-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  #s7 .cols,
   .orders-grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -1250,7 +1066,7 @@ body {
 }
 
 .order-body {
-  color: #b0ccd8;
+  color: var(--body-dim);
   font-size: clamp(0.66rem, 1vw, 0.8rem);
   line-height: 1.5;
 }
@@ -1266,13 +1082,6 @@ body {
   text-decoration-color: var(--teal);
 }
 
-.source-abs {
-  align-self: flex-end;
-  margin-top: 1.2rem;
-  font-size: 0.72rem;
-  color: var(--muted);
-  text-align: right;
-}
 
 .wheel-note {
   margin-top: 0.8rem;
