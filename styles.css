@@ -315,6 +315,15 @@ body {
   line-height: 1.6;
 }
 
+.ctx-lead {
+  display: block;
+  font-size: clamp(0.85rem, 1.3vw, 1rem);
+  color: #e0f0f8;
+  font-weight: 600;
+  margin-bottom: 0.45rem;
+  line-height: 1.4;
+}
+
 #s3 {
   background: linear-gradient(160deg, #0d1b2a 0%, #1a2a3a 100%);
 }
@@ -592,7 +601,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 0.8rem;
   width: 100%;
-  max-width: 710px;
+  max-width: 950px;
 }
 
 #s8 .st {
@@ -929,7 +938,11 @@ body {
     grid-template-columns: 1fr 1fr;
   }
   #s8 .step2 {
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    justify-content: center;
+  }
+  #s8 .step2 .st {
+    flex: 0 0 calc(25% - 0.6rem);
   }
   #s3c {
     flex-direction: row !important;
