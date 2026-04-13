@@ -42,7 +42,7 @@ body {
   flex-direction: column;
   justify-content: safe center;
   align-items: center;
-  padding: 3rem 5vw 9vh;
+  padding: 3rem 5vw 15vh;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.45s ease;
