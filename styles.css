@@ -131,18 +131,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-#s1 .badge {
-  display: inline-block;
-  background: var(--gold);
-  color: #000;
-  font-weight: 800;
-  font-size: clamp(0.7rem, 1.5vw, 1rem);
-  padding: 0.3rem 1.2rem;
-  border-radius: 2rem;
-  letter-spacing: 0.1em;
-  margin-bottom: 2rem;
-}
-
 #s1 h1 {
   font-size: clamp(2rem, 5vw, 4rem);
   font-weight: 900;
@@ -698,7 +686,7 @@ body {
   height: 480px;
   margin-bottom: 1.2rem;
   flex-shrink: 0;
-  zoom: 0.4;
+  transform: scale(0.4);
 }
 
 #s1b .sc {
@@ -803,7 +791,7 @@ body {
   width: 400px;
   height: 400px;
   flex-shrink: 0;
-  zoom: 0.72;
+  transform: scale(0.72);
   z-index: 10;
   isolation: isolate;
 }
@@ -880,10 +868,10 @@ body {
 
 @media (min-width: 500px) {
   .wheel-wrap {
-    zoom: 0.9;
+    transform: scale(0.9);
   }
   #s1b .collage-wrap {
-    zoom: 0.65;
+    transform: scale(0.65);
   }
 }
 
@@ -951,10 +939,10 @@ body {
     max-width: 320px;
   }
   .wheel-wrap {
-    zoom: 1.12;
+    transform: scale(1.12);
   }
   #s1b .collage-wrap {
-    zoom: 1;
+    transform: scale(1);
   }
 }
 

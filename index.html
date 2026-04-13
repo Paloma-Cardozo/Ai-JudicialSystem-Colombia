@@ -9,7 +9,7 @@
       content="Colombia's Constitutional Court ruled on AI tool use in courts in 2024. This is what the ruling says, what the official framework requires, and what a national survey of 3,152 judiciary staff found." />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; base-uri 'self'; form-action 'none';" />
+      content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self'; connect-src 'self' ws:; base-uri 'self'; form-action 'none';" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -729,7 +729,7 @@
         aria-label="Slide 10: The Numbers">
         <h2>The Numbers</h2>
         <p class="sub">
-          Survey conducted July 11–26, 2024 · 3,152 respondents · 8.2% of total
+          Survey conducted July 11–26, 2024 (before the August ruling) · 3,152 respondents · 8.2% of total
           judiciary staff · national coverage
         </p>
         <div class="stats-row">
@@ -933,11 +933,11 @@
     </div>
 
     <div id="nav">
-      <button id="prevBtn" onclick="move(-1)" aria-label="Previous slide">
+      <button id="prevBtn" aria-label="Previous slide">
         ←
       </button>
       <span id="counter" aria-live="polite" aria-atomic="true"></span>
-      <button id="nextBtn" onclick="move(1)" aria-label="Next slide">→</button>
+      <button id="nextBtn" aria-label="Next slide">→</button>
     </div>
 
     <script src="slides.js"></script>
