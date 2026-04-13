@@ -44,31 +44,32 @@ document.addEventListener("touchend", (e) => {
   if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) move(dx < 0 ? 1 : -1);
 });
 
-(function buildWheelTip() {
-  const tip = document.createElement("div");
-  tip.id = "wheelTip";
-  document.body.appendChild(tip);
+(function buildWheel() {
+  const tooltipEl = document.createElement("div");
+  tooltipEl.id = "wheelTip";
+  document.body.appendChild(tooltipEl);
 
   function position(e) {
     const x = e.clientX + 14;
     const y = e.clientY - 48;
-    tip.style.left = Math.min(x, window.innerWidth - 240) + "px";
-    tip.style.top = Math.max(y, 8) + "px";
+    tooltipEl.style.left = Math.min(x, window.innerWidth - 240) + "px";
+    tooltipEl.style.top = Math.max(y, 8) + "px";
+  }
+
+  function showTip(text, e) {
+    tooltipEl.textContent = text;
+    tooltipEl.style.display = "block";
+    position(e);
+  }
+
+  function hideTip() {
+    tooltipEl.style.display = "none";
   }
 
   document.addEventListener("mousemove", (e) => {
-    if (tip.style.display === "block") position(e);
+    if (tooltipEl.style.display === "block") position(e);
   });
 
-  window._showWheelTip = (text, e) => {
-    tip.textContent = text;
-    tip.style.display = "block";
-    position(e);
-  };
-  window._hideWheelTip = () => { tip.style.display = "none"; };
-})();
-
-(function buildWheel() {
   const principles = [
     { name: "Transparency",        tip: "Disclose which tool, what you asked it, and where its output appears in the record." },
     { name: "Responsibility",      tip: "Get trained, understand the limits, and verify everything the tool generates." },
@@ -85,13 +86,11 @@ document.addEventListener("touchend", (e) => {
   ];
   const wrap = document.getElementById("wheel");
   const svg = document.getElementById("wheelSvg");
-  const cx = 200,
-    cy = 200,
-    r = 162;
+  const cx = 200, cy = 200, r = 162;
   const ns = "http://www.w3.org/2000/svg";
 
   principles.forEach(({ name, tip }, i) => {
-    const angle = (i / 12) * Math.PI * 2 - Math.PI / 2;
+    const angle = (i / principles.length) * Math.PI * 2 - Math.PI / 2;
     const x = cx + r * Math.cos(angle);
     const y = cy + r * Math.sin(angle);
 
@@ -113,11 +112,14 @@ document.addEventListener("touchend", (e) => {
     pill.textContent = name;
     pill.style.left = x + "px";
     pill.style.top = y + "px";
-    pill.addEventListener("mouseenter", (e) => window._showWheelTip(tip, e));
-    pill.addEventListener("mouseleave", () => window._hideWheelTip());
+    pill.addEventListener("mouseenter", (e) => showTip(tip, e));
+    pill.addEventListener("mouseleave", hideTip);
     wrap.appendChild(pill);
   });
 })();
 
 document.getElementById("counter").textContent = `1 / ${total}`;
-document.getElementById("progress").style.width = `${(1 / total) * 100}%`;
+const progressEl = document.getElementById("progress");
+progressEl.setAttribute("aria-valuemax", total);
+progressEl.setAttribute("aria-valuenow", 1);
+progressEl.style.width = `${(1 / total) * 100}%`;
