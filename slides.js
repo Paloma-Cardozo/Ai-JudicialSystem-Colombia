@@ -1,17 +1,18 @@
 const slides = document.querySelectorAll(".slide");
 const total = slides.length;
+const progressEl = document.getElementById("progress");
 let cur = 0;
 
 function show(n) {
+  hideWheelTip();
   slides[cur].classList.remove("active");
   cur = (n + total) % total;
   slides[cur].classList.add("active");
   slides[cur].setAttribute("tabindex", "-1");
   slides[cur].focus({ preventScroll: true });
   document.getElementById("counter").textContent = `${cur + 1} / ${total}`;
-  const progress = document.getElementById("progress");
-  progress.style.width = `${((cur + 1) / total) * 100}%`;
-  progress.setAttribute("aria-valuenow", cur + 1);
+  progressEl.style.width = `${((cur + 1) / total) * 100}%`;
+  progressEl.setAttribute("aria-valuenow", cur + 1);
 }
 
 function move(dir) {
@@ -19,7 +20,8 @@ function move(dir) {
 }
 
 document.addEventListener("keydown", (e) => {
-  if (e.key === "ArrowRight" || e.key === "ArrowDown" || e.key === " ") {
+  const onButton = document.activeElement.tagName === "BUTTON";
+  if (e.key === "ArrowRight" || e.key === "ArrowDown" || (e.key === " " && !onButton)) {
     e.preventDefault();
     move(1);
   }
@@ -44,7 +46,7 @@ document.addEventListener("touchend", (e) => {
   if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) move(dx < 0 ? 1 : -1);
 });
 
-(function buildWheel() {
+const hideWheelTip = (function buildWheel() {
   const tooltipEl = document.createElement("div");
   tooltipEl.id = "wheelTip";
   document.body.appendChild(tooltipEl);
@@ -86,6 +88,7 @@ document.addEventListener("touchend", (e) => {
   ];
   const wrap = document.getElementById("wheel");
   const svg = document.getElementById("wheelSvg");
+  if (!wrap || !svg) return hideTip;
   const cx = 200, cy = 200, r = 162;
   const ns = "http://www.w3.org/2000/svg";
 
@@ -116,10 +119,11 @@ document.addEventListener("touchend", (e) => {
     pill.addEventListener("mouseleave", hideTip);
     wrap.appendChild(pill);
   });
+
+  return hideTip;
 })();
 
 document.getElementById("counter").textContent = `1 / ${total}`;
-const progressEl = document.getElementById("progress");
 progressEl.setAttribute("aria-valuemax", total);
 progressEl.setAttribute("aria-valuenow", 1);
 progressEl.style.width = `${(1 / total) * 100}%`;
